@@ -18,13 +18,5 @@ install_aws_ssm_agent(){
     sudo systemctl enable amazon-ssm-agent
 }
 
-install_rundeck(){
-    sudo apt-get install openjdk-8-jdk -y
-    cd /tmp 
-    wget http://dl.bintray.com/rundeck/rundeck-deb/rundeck_2.10.7-1-GA_all.deb
-    sudo dpkg -i rundeck_2.10.7-1-GA_all.deb
-}
-
 install_aws_cli
 install_aws_ssm_agent
-install_rundeck

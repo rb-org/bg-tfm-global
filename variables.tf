@@ -18,3 +18,27 @@ variable "default_tags" {
 }
 
 variable "acc_id" {}
+
+variable "key_name" {
+  type = "map"
+}
+
+variable "ssh_ami_id" {
+  type = "map"
+
+  default = {
+    eu-west-1 = "ami-1b791862"
+  }
+}
+
+variable "rndk_ami_id" {
+  type = "map"
+
+  default = {
+    eu-west-1 = "ami-1b791862"
+  }
+}
+
+variable "allowed_ips" {
+  type = "list"
+}

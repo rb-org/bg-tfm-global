@@ -70,7 +70,7 @@ jobs:
       - run: mkdir -p plans
       - run: terraform init -input=false
       
-      - run: terraform plan -var-file=env/${WKSPC}.tfvars -var acc_id=${acc_id} -no-color -input=false -out=plans/tfm.plan
+      - run: terraform plan -var-file=env/${WKSPC}.tfvars -var acc_id=${acc_id} -var allowed_ips=${allowed_ips} -no-color -input=false -out=plans/tfm.plan
       - persist_to_workspace:
           root: plans
           paths:
