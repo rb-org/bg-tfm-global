@@ -10,7 +10,7 @@ module "ec2_bastion_ssh" {
   root_volume_type        = "gp2"
   root_volume_size        = 50
   user_data               = "./files/userdata.sh"
-  subnet                  = ["${var.private_subnets}"]
+  subnet                  = ["${var.public_subnets}"]
   security_group          = ["${aws_security_group.sg_bastion.id}"]
   environment             = "${var.environment}"
   app_id                  = "ssh"
