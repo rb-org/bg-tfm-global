@@ -15,10 +15,10 @@ module "ec2_bastion_ssh" {
   environment             = "${var.environment}"
   app_id                  = "ssh"
   app_role                = "bastion"
-  chef_enabled            = true
-  backup_enabled          = false
+  chef_enabled            = "true"
+  backup_enabled          = "false"
   public_ip               = true
-  enable_monitoring       = true
-  disable_api_termination = true
+  enable_monitoring       = false
+  disable_api_termination = false
   instance_profile_name   = "${var.iam_instance_profile}"
 }
